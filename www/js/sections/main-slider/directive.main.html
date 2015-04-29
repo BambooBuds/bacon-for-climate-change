@@ -3,7 +3,7 @@
     <ion-slide-box on-slide-changed="topPaneChanged($index)">
       <ion-slide ng-repeat="item in worseElements">
         <div>
-	  <h1>{{item.name}}</h1>
+	  <h1>{{item.name.singular}}</h1>
 	  <object height="200" width="200" data="img/svgs/noun_{{item.svg}}_cc.svg?color=blue">
 	  </object>
         </div>
@@ -18,7 +18,7 @@
     <ion-slide-box>
       <ion-slide ng-repeat="item in betterElements">
         <div>
-          <h1>{{item.name}}</h1>
+          <h1>{{nameBuilder(item)}}</h1>
           <h2>{{itemsForSelectedItem(item)}}</h2>
 	  <object height="200" width="200" data="img/svgs/noun_{{item.svg}}_cc.svg"></object>
         </div>

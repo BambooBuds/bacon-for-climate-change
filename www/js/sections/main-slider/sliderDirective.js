@@ -32,6 +32,12 @@ angular.module('starter').directive('main', [
         scope.itemsForSelectedItem = function(item) {
           return carbonService.itemsForItem(item, scope.worseElements[selectedIndex]);
         };
+        scope.nameBuilder = function(item) {
+          if (scope.itemsForSelectedItem(item) > 1) {
+            return item.name.plural;
+          }
+          return item.name.singular;
+        };
       }
     };
 }]);
