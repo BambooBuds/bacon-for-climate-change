@@ -9,16 +9,20 @@ angular.module('starter').directive('main', [
         selectedIndex = 0;
         scope.worseElements = [];
         scope.betterElements = [];
+        bacon_id = null;
         var i, len;
-        for(i = 0, len = carbonService.get().length; i < len; i++) {
-          if (carbonService.get(i).ratio > carbonService.get(0).ratio) {
-            scope.worseElements.push(carbonService.get(i));
-          } else if (carbonService.get(i).id != carbonService.get(0).id) {
-            scope.betterElements.push(carbonService.get(i));
+        Object.keys(carbonService.get()).forEach(function (element, index) {
+          item = carbonService.get(element);
+          if (item.category == 1) {
+            scope.worseElements.push(item);
+          } else if (item.category == 3) {
+            scope.betterElements.push(item);
+          } else {
+            bacon_id = element.id;
           }
-        }
+        });
         updateStripsOfBacon = function() {
-          scope.stripsOfBacon = carbonService.itemsForItem(carbonService.get(0), scope.worseElements[selectedIndex]);
+          scope.stripsOfBacon = carbonService.itemsForItem(carbonService.get(14), scope.worseElements[selectedIndex]);
         };
         updateStripsOfBacon();
         scope.topPaneChanged = function(index) {
