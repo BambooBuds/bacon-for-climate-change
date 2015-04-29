@@ -15,10 +15,8 @@ angular.module('starter').factory('carbonService', [
         lbsC02: element[C02_IND],
 	svg: element[SVG_IND]
       };
-      c02Ojbect[obj.id] = obj;
+      c02Object[obj.id] = obj;
     }
-
-    bacon_id = 0;
 
     service = {};
     service.get = function(id) {
@@ -28,7 +26,7 @@ angular.module('starter').factory('carbonService', [
       return c02Object[id];
     };
     service.itemsForItem = function(exchange_x, for_y) {
-      return Math.floor(for_y.ratio / exchange_x.ratio);
+      return Math.floor(for_y.lbsC02 / exchange_x.lbsC02);
     };
 
     return service; 
