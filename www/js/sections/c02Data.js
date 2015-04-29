@@ -7,7 +7,6 @@ C02_IND = 5;
 SVG_IND = 6;
 
 c02Data = [
-  // item_name, kg_c02_per_kg
 [1,  "hamburger",                1, "hamburger",                        "hamburgers",                        6.816  , 91004 ],
 [2,  "cheeseburger",             1, "cheeseburger",                     "cheeseburgers",                     7.491  , 41704 ],
 [3,  "beef hot dog",             1, "beef hot dog",                     "beef hot dogs",                     2.7    , 91004 ],
