@@ -14,6 +14,12 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 
-svg {
-  fill: $royal;
+.slider-pager {
+  display: none;
+}
+
+.mainSlider--svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

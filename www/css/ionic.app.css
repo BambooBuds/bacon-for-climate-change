@@ -6999,5 +6999,10 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-svg {
-  fill: #886aea; }
+.slider-pager {
+  display: none; }
+
+.mainSlider--svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }

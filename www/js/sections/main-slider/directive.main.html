@@ -1,28 +1,36 @@
-<ion-content>
-  <div class="row">
-    <ion-slide-box on-slide-changed="topPaneChanged($index)">
-      <ion-slide ng-repeat="item in worseElements">
-        <div>
-	  <h1>{{item.name.singular}}</h1>
-	  <object height="200" width="200" data="img/svgs/noun_{{item.svg}}_cc.svg?color=blue">
-	  </object>
-        </div>
-      </ion-slide>
-    </ion-slide-box>
-  </div>
-  <div class="row row-center">
+<div class="row">
+  <ion-slide-box on-slide-changed="topPaneChanged($index)">
+    <ion-slide ng-repeat="item in worseElements">
+      <div>
+        <h1>{{item.name.singular}}</h1>
+        <img
+          class="mainSlider--svg"
+          src="img/svgs/noun_{{item.svg}}_cc.svg">
+        </img>
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+</div>
+<div class="row">
+  <div style="width: 100%">
     <h1>Eat {{stripsOfBacon}}</h1>
-    <object height="200" width="200" data="img/svgs/noun_41703_cc.svg"></object>
+    <img
+      class="mainSlider--svg"
+      src="img/svgs/noun_41703_cc.svg">
+    </img>
   </div>
-  <div class="row row-bottom">
-    <ion-slide-box>
-      <ion-slide ng-repeat="item in betterElements">
-        <div>
-          <h1>{{nameBuilder(item)}}</h1>
-          <h2>{{itemsForSelectedItem(item)}}</h2>
-	  <object height="200" width="200" data="img/svgs/noun_{{item.svg}}_cc.svg"></object>
-        </div>
-      </ion-slide>
-    </ion-slide-box>
-  </div>
-</ion-content>
+</div>
+<div class="row row-bottom">
+  <ion-slide-box>
+    <ion-slide ng-repeat="item in betterElements">
+      <div>
+        <h1>{{nameBuilder(item)}}</h1>
+        <h2>{{itemsForSelectedItem(item)}}</h2>
+	<img
+          class="mainSlider--svg"
+          src="img/svgs/noun_{{item.svg}}_cc.svg">
+        </object>
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+</div>
