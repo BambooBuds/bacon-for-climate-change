@@ -1,34 +1,43 @@
 <div class="row">
   <ion-slide-box on-slide-changed="topPaneChanged($index)">
     <ion-slide ng-repeat="item in worseElements">
-      <div>
-        <h1 ng-bind="item.name.singular"></h1>
-        <object
-          class="mainSlider--svg"
-	  ng-attr-data="{{svgLoc(item.svg)}}"></object>
+      <div class="list card">
+        <div class="item item-avatar">
+          <h2 ng-bind="item.name.singular"></h2>
+        </div>
+        <div class="item item-image">
+          <img
+            ng-src="{{imgLoc(item.img)}}"></img>
+        </div>
       </div>
     </ion-slide>
   </ion-slide-box>
 </div>
 <div class="row">
-  <div style="width: 100%">
-    <h1 ng-bind="'Eat ' + stripsOfBacon"></h1>
-    <object
-      class="mainSlider--svg"
-      ng-attr-data="{{svgLoc(41703)}}"></object>
+  <div class="list card">
+    <div class="item item-avatar">
+      <h2 ng-bind="'Eat ' + stripsOfBacon"></h2>
+    </div>
+    <div class="item item-image">
+      <img
+        ng-src="{{imgLoc('bacon.jpg')}}"></img>
+    </div>
   </div>
 </div>
 <div class="row row-bottom">
   <ion-slide-box>
     <ion-slide ng-repeat="item in betterElements">
-      <div>
-        <h1 ng-bind="nameBuilder(item)"></h1>
-	<h2>
-          <span ng-bind="itemsForSelectedItem(item)"></span>
-        </h2>
-	<object
-          class="mainSlider--svg"
-	  ng-attr-data="{{svgLoc(item.svg)}}"></object>
+      <div class="list card">
+        <div class="item item-avatar">
+            <h2 ng-bind="nameBuilder(item)"></h2>
+            <p>
+              <span ng-bind="itemsForSelectedItem(item)"></span>
+            </p>
+        </div>
+        <div class="item item-image">
+          <img
+            ng-src="{{imgLoc(item.img)}}"></img>
+        </div>
       </div>
     </ion-slide>
   </ion-slide-box>

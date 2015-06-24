@@ -13,7 +13,7 @@ angular.module('starter').factory('carbonService', [
 	},
         category: element[CAT_IND],
         lbsC02: element[C02_IND],
-	svg: element[SVG_IND]
+	img: element[IMG_IND]
       };
       c02Object[obj.id] = obj;
     }
