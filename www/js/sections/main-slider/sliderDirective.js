@@ -38,6 +38,9 @@ angular.module('starter').directive('main', [
           }
           return item.name.singular;
         };
+	scope.svgLoc = function(id) {
+          return 'img/svgs/noun_' + id + '_cc.svg';
+	};
       }
     };
 }]);
