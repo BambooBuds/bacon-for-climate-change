@@ -1,35 +1,47 @@
-<div class="row">
+<div class="row pane-slider">
   <ion-slide-box on-slide-changed="topPaneChanged($index)">
     <ion-slide ng-repeat="item in worseElements">
-      <div>
-        <h1>{{item.name.singular}}</h1>
-        <img
-          class="mainSlider--svg"
-          src="img/svgs/noun_{{item.svg}}_cc.svg">
-        </img>
+      <div class="list card">
+        <div class="item item-divider">
+          <span ng-bind="item.name.singular"></span>
+        </div>
+        <div class="item item-image">
+          <div class="crop-box">
+            <img
+              ng-src="{{imgLoc(item.img)}}"></img>
+          </div>
+        </div>
       </div>
     </ion-slide>
   </ion-slide-box>
 </div>
-<div class="row">
-  <div style="width: 100%">
-    <h1>Eat {{stripsOfBacon}}</h1>
-    <img
-      class="mainSlider--svg"
-      src="img/svgs/noun_41703_cc.svg">
-    </img>
+<div class="row pane-slider">
+  <div class="list card">
+    <div class="item item-divider">
+      <span ng-bind="'Eat ' + stripsOfBacon"></span>
+    </div>
+    <div class="item item-image">
+      <div class="crop-box">
+        <img
+          ng-src="{{imgLoc('bacon.jpg')}}"></img>
+      </div>
+    </div>
   </div>
 </div>
-<div class="row row-bottom">
+<div class="row row-bottom pane-slider">
   <ion-slide-box>
     <ion-slide ng-repeat="item in betterElements">
-      <div>
-        <h1>{{nameBuilder(item)}}</h1>
-        <h2>{{itemsForSelectedItem(item)}}</h2>
-	<img
-          class="mainSlider--svg"
-          src="img/svgs/noun_{{item.svg}}_cc.svg">
-        </object>
+      <div class="list card">
+        <div class="item item-divider">
+            <span ng-bind="nameBuilder(item)"></span>
+            <span ng-bind="itemsForSelectedItem(item)"></span>
+        </div>
+        <div class="item item-image">
+          <div class="crop-box">
+            <img
+              ng-src="{{imgLoc(item.img)}}"></img>
+          </div>
+        </div>
       </div>
     </ion-slide>
   </ion-slide-box>

@@ -38,6 +38,9 @@ angular.module('starter').directive('main', [
           }
           return item.name.singular;
         };
+	scope.imgLoc = function(fileName) {
+          return 'img/imgs/' + fileName;
+	};
       }
     };
 }]);

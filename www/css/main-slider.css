@@ -1,0 +1,19 @@
+/* Empty. Add your own CSS if you like */
+
+.main-slider {
+  margin-top: 25px;
+}
+
+.pane-slider.row {
+  margin-top: -50px;
+}
+
+div.crop-box {
+  max-height: 150px;
+  overflow: hidden;
+}
+
+div.crop-box img {
+  width: 100%;
+  margin-top: -25px;
+}
