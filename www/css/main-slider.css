@@ -11,7 +11,9 @@
 div.crop-box {
   max-height: 150px;
   overflow: hidden;
-  img {
-    width: 100%;
-  }
+}
+
+div.crop-box img {
+  width: 100%;
+  margin-top: -25px;
 }
